@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<block>
+  <name>Square2</name>
+  <key>framer_square2_ff</key>
+  <category>FRAMER</category>
+  <import>import framer</import>
+  <make>framer.square2_ff()</make>
+
+  <sink>
+    <name>in</name>
+    <type>float</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+</block>

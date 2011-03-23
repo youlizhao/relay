@@ -85,7 +85,7 @@ class framer_sink_rs : public gr_sync_block
     unsigned int i, weight = 0, ret = 0;
     for(i = 0; i < 12; i++)
       weight += (d_header >> i) & 0x1;	// calculate the hamming weight of the received header
-    for(i = 16; i < 32; i++)            // do not count weightener offset, as our flow graph does not use this we do not care!
+    for(i = 16; i < 28; i++)            // do not count weightener offset, as our flow graph does not use this we do not care!
       weight += (d_header >> i) & 0x1;
     if (weight < 12)
       d_header = 5;
