@@ -26,7 +26,7 @@ import os.path
 # into the gnuradio.blks2 namespace.  This keeps us from having to remember 
 # to manually update this file.
 
-p = "/home/hausl/softwaredefinedradio/studenten/bittl/code_bittl/my_gnuradio/blks2"
+p = "/home/iot/git/relaying_schemes_implementation/trunk/my_gnuradio/blks2"
 
 if os.path.exists(p) == False:
     print "Error: Directory including modulation schemes not found! Check the absolute path in my_gnuradio/blks2/__init__.py! " + p
@@ -39,4 +39,4 @@ for f in filenames:
     if f == '__init__':
         continue
     # print f
-    exec "from blks2impl.%s import *" % (f,)
+    exec "from my_gnuradio.blks2impl.%s import *" % (f,)
